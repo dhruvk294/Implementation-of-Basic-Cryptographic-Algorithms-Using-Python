@@ -17,7 +17,7 @@ This project demonstrates the practical implementation of core cryptographic tec
 
 ##  Project Structure
 
-- `crypto_demo.py` — Main script containing all cryptographic implementations
+- `crypto.py` — Main script containing all cryptographic implementations
 - Functions are modular and easy to test or integrate into other projects
 
 ##  Requirements

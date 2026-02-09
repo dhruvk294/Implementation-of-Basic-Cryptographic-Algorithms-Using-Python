@@ -1,3 +1,6 @@
+# Cryptography with Python
+# Demonstrates AES-GCM, RSA (OAEP), RSA signing (PSS), SHA-256, and HMAC-SHA256
+
 from Crypto.Cipher import AES, PKCS1_OAEP
 from Crypto.PublicKey import RSA
 from Crypto.Signature import pss

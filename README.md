@@ -1,27 +1,72 @@
 # Cryptography with Python
 
-This project demonstrates the practical implementation of core cryptographic techniques using Python and the PyCryptodome library. It includes examples of:
+This project demonstrates the practical implementation of core cryptographic techniques using Python and the PyCryptodome library.
 
--  Symmetric Encryption with AES-GCM  
--  Asymmetric Encryption and Digital Signatures using RSA  
--  Hashing and HMAC with SHA-256  
+### Algorithms & Techniques Used
 
-##  Features
+- **AES-GCM (Advanced Encryption Standard – Galois Counter Mode)**  
+  Used for fast and secure symmetric encryption with built-in integrity and authentication. Any tampering with encrypted data is detected during decryption.
 
-- AES-256 GCM encryption and decryption (with authentication tag)
-- RSA (2048-bit) public-private key generation
-- Secure encryption using RSA-OAEP
-- Digital signature creation and verification using RSA-PSS
-- Message hashing with SHA-256
-- HMAC implementation for integrity and authenticity
+- **RSA (OAEP Padding)**  
+  Used for asymmetric encryption to securely encrypt small messages or secrets such as session keys.
 
-##  Project Structure
+- **RSA Digital Signatures (PSS Padding)**  
+  Used to ensure message authenticity, integrity, and non-repudiation through cryptographic signing and verification.
 
-- `crypto.py` — Main script containing all cryptographic implementations
-- Functions are modular and easy to test or integrate into other projects
+- **SHA-256 (Secure Hash Algorithm)**  
+  Used to generate fixed-length cryptographic hashes for data integrity verification.
 
-##  Requirements
+- **HMAC-SHA256 (Hash-based Message Authentication Code)**  
+  Used to provide tamper-proof integrity and authentication using a shared secret key, suitable for secure logs and API authentication.
 
-- Python 3.6+
-- PyCryptodome  
-  Install via pip: pip install pycryptodome
+### Design Approach
+
+- Cryptographic logic is modularized into reusable functions.
+- A menu-driven CLI interface allows users to interactively perform encryption, decryption, signing, verification, hashing, and HMAC generation.
+- Secure defaults are used, such as:
+  - AES-256 keys
+  - 12-byte nonces for AES-GCM
+  - RSA-2048 key pairs
+  - SHA-256 for hashing and signatures
+- Keys are generated per session for demonstration purposes, avoiding insecure hard-coding.
+
+### Features
+
+- AES-GCM encryption and authenticated decryption
+- RSA public-key encryption and private-key decryption
+- RSA-PSS digital signature generation and verification
+- SHA-256 hashing for integrity checks
+- HMAC-SHA256 for authenticated integrity
+- Interactive command-line interface for easy demonstration
+- Clear separation of cryptographic primitives and user interface
+
+### How to Run
+
+Install dependencies:
+   "pip install pycryptodome"
+and then run:
+   "python main.py"
+
+### Learning Outcomes
+
+- Practical understanding of symmetric vs asymmetric cryptography
+- Hands-on experience with authenticated encryption (AEAD)
+- Understanding of secure key usage and cryptographic padding schemes
+- Insight into how multiple cryptographic algorithms are combined in real systems
+- Improved familiarity with secure coding practices in Python
+
+### Security Note
+
+This project is intended for educational and demonstration purposes only.  
+Keys are generated dynamically per session and are not persisted securely.  
+The implementation should not be used directly in production environments without proper key management, secure storage, and threat modeling.
+
+### Real-World Relevance
+
+The architecture demonstrated in this project mirrors real-world secure communication systems:
+
+- RSA for secure key exchange and identity verification
+- AES-GCM for high-performance encrypted data transfer
+- SHA-256 and HMAC for integrity, authentication, and logging
+
+These techniques are widely used in TLS/HTTPS, VPNs, secure APIs, cloud platforms, and security monitoring systems.

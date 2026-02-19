@@ -40,12 +40,16 @@ This project demonstrates the practical implementation of core cryptographic tec
 - Interactive command-line interface for easy demonstration
 - Clear separation of cryptographic primitives and user interface
 
-### How to Run
+### Demo of the project(images)
 
-Install dependencies:
-   "pip install pycryptodome"
-and then run:
-   "python main.py"
+<img width="1919" height="1140" alt="Screenshot 2026-02-19 203020" src="https://github.com/user-attachments/assets/2ba27665-c24e-4ffe-a04a-2b2fbdbe2269" />
+
+<img width="1916" height="1137" alt="Screenshot 2026-02-19 203035" src="https://github.com/user-attachments/assets/bacde7ef-3e1c-4624-8bca-015487d77343" />
+
+<img width="1919" height="1136" alt="Screenshot 2026-02-19 203104" src="https://github.com/user-attachments/assets/409ad41f-dc1a-42df-bbb5-a8c2d4964b3b" />
+
+
+
 
 ### Learning Outcomes
 
